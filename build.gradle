@@ -15,7 +15,7 @@ loom {
 }
 
 repositories {
-	// Add Maven Central as a fallback for widely-published artifacts
+	// Add Maven Central as a reliable fallback for widely-published artifacts
 	mavenCentral()
 
 	maven {
@@ -38,7 +38,7 @@ repositories {
 		name = "geckolib"
 		url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/"
 	}
-	// Ladysnake JFrog was previously here; keep it but do not rely on it as it's down
+	// Keep Ladysnake JFrog as an option but don't rely on it exclusively
 	maven {
 		name = "Ladysnake Mods (& Trinkets)"
 		url = "https://ladysnake.jfrog.io/artifactory/mods"
@@ -54,9 +54,9 @@ repositories {
 	maven {
 		url = "https://jitpack.io"
 	}
-	// Modrinth maven (already present in your file but ensure it's here)
+	// Modrinth maven (useful for MidnightLib and other modlib artifacts)
 	maven {
-		name = "MidnightLib"
+		name = "Modrinth"
 		url = "https://api.modrinth.com/maven"
 	}
 	maven {
@@ -64,6 +64,7 @@ repositories {
 		url "https://maven.theepicblock.nl"
 	}
 }
+
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
@@ -85,7 +86,7 @@ dependencies {
 	}
 
 
-	 */
+		 */
 	//Energy
 	modApi include("teamreborn:energy:${project.energy_version}")
 
